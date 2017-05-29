@@ -82,6 +82,13 @@ class RunnerDelegate implements Hiraeth\Delegate
 		$queue  = $this->config->get('relay', 'middleware.queue', array());
 		$runner = new Relay\Runner($queue, $this->resolver);
 
+		if (in_array('Relay\Middleware\SessionHeadersHandler', $queue)) {
+			ini_set('session.use_cookies', FALSE);
+			ini_set('session.use_only_cookies', TRUE);
+			ini_set('session.use_trans_sid', FALSE);
+			ini_set('session.cache_limiter', '');
+		}
+
 		$broker->share($runner);
 
 		return $runner;
