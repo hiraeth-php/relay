@@ -1,0 +1,28 @@
+{
+    "name": "hiraeth/relay",
+    "description": "Relay for the Hiraeth Nano-Framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name":  "Matthew J. Sahagian",
+            "email": "msahagian@dotink.org",
+            "role":  "Lead Architect / Developer"
+        }
+    ],
+    "require": {
+        "relay/relay": "^1.1",
+        "relay/middleware": "^1.2"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "type": "opus-package",
+    "extra": {
+        "opus": {
+            "hiraeth/app": {
+                "plugin/config": "",
+                "plugin/public": ""
+            }
+        }
+    }
+}
