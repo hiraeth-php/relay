@@ -3,8 +3,8 @@
 namespace Hiraeth\Relay;
 
 use Closure;
+use Hiraeth;
 use Relay;
-use Auryn;
 
 /**
  *
@@ -20,7 +20,7 @@ class Resolver implements Relay\ResolverInterface
 	/**
 	 *
 	 */
-	public function __construct(Auryn\Injector $broker)
+	public function __construct(Hiraeth\Broker $broker)
 	{
 		$this->broker = $broker;
 	}
