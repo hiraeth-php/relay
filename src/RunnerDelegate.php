@@ -55,7 +55,7 @@ class RunnerDelegate implements Hiraeth\Delegate
 
 
 	/**
-	 * Construct the relay delegate
+	 * Construct the delegate
 	 *
 	 * @access public
 	 * @param Hiraeth\Configuration $config The Hiraeth configuration instance
