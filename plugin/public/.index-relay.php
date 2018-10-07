@@ -18,17 +18,5 @@ $loader  = require $root_path . '/vendor/autoload.php';
 $hiraeth = new Hiraeth\Application($root_path, $loader);
 
 exit($hiraeth->run(function(Runner $runner, Request $request, Response $response) {
-	try {
-		$runner($request, $response);
-
-	} catch (Exception $e) {
-		if ($this->getEnvironment('DEBUG')) {
-			throw $e;
-		}
-
-		header('HTTP/1.1 500 Internal Server Error');
-		echo 'Request cannot be completed at this time, please try again later.';
-
-		return 1;
-	}
+	$runner($request, $response);
 }));

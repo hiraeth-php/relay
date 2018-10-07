@@ -11,7 +11,8 @@
     ],
     "require": {
         "relay/relay": "^1.1",
-        "relay/middleware": "^1.2"
+        "relay/middleware": "^1.2",
+	"hiraeth/core": "^1.5"
     },
     "autoload": {
         "classmap": ["src/"]
